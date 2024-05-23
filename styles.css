@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    background-color: #fdf0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.container {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.big-bold {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#flower-form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ff6f91;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-family: 'Patrick Hand', cursive;
+}
+
+input[type="text"]::placeholder {
+    font-family: 'Patrick Hand', cursive;
+    color: #ff6f91;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6f91;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-family: 'Patrick Hand', cursive;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4e78;
+}
+
+#typewriter-text {
+    font-size: 2em;
+    color: #ff6f91;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #ff6f91;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ff6f91; }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+#love-text {
+    color: pink;
+    opacity: 0;
+}
+
+#reveal-button {
+    margin-top: 20px; /* Add margin to create space between typewriter text and button */
+}
+
+#question-container {
+    text-align: center; /* Center-align the elements within the container */
+}
+@keyframes flowerFall {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+.flower {
+    position: absolute;
+    width: 60px; /* Adjust flower width as needed */
+    height: 60px; /* Adjust flower height as needed */
+    animation: flowerFall 5s linear infinite;
+}
