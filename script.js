@@ -46,7 +46,7 @@ document.getElementById('reveal-button').addEventListener('click', function() {
 
 function createFlowers() {
     const numFlowers = 50; // Number of flowers
-    const flowerImages = ['1.png']; // Array of flower images
+    const flowerImages = ['/img/1.png']; // Array of flower images
     const flowerRainContainer = document.getElementById('flower-rain');
 
     for (let i = 0; i < numFlowers; i++) {
